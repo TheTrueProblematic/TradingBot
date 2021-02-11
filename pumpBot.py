@@ -64,6 +64,7 @@ shrimpy_public_key = 'eb3b30e4cceb52907166182a1b7c718fa39e3c7e206c9ab7dc0d6486f2
 shrimpy_secret_key = '1d926f3bcbff631b0e8b93aad9cc7d3c0d886ad5b9e3589e86669a59d31f2fad784f8cbadcd009bd951ee630971ff0fbc6bc20c0dfd7da020e9a65ce097c6418'
 
 def error_handler(err):
+    sell('BTC')
     print(err)
 
 # Create the websocket client
@@ -74,26 +75,10 @@ ws_client = shrimpy.ShrimpyWsClient(error_handler, raw_token['token'])
 clear()
 check(center("Client all set")+"\n"+center("Error handler ready")) #2
 time.sleep(speed)
-# Create a user which will be linked to our exchange
-# Skip this step (or use the "list users" endpoint) if you've already created a user
-# create_user_response = api_client.create_user('The Shrimp Master')
-# user_id = create_user_response['id']
+
 user_id = 'cbc3dd48-e823-472c-a7e6-2219ed8fe0bb'
 
-# Link our first exchange so we can access balance data
-# Skip this step (or use the "list accounts" endpoint) if you've already linked an account
-# link_account_response = api_client.link_account(
-#     user_id,
-#     exchange_name,
-#     exchange_public_key,
-#     exchange_secret_key
-# )
-
 account_id = '67114'
-
-# Wait while Shrimpy collects data for the exchange account
-# Only required the first time linking
-# time.sleep(5)
 
 # Access balance data for the user account you previously created
 balance = api_client.get_balance(
