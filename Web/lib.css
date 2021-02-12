@@ -139,8 +139,8 @@ div.menu:hover {
     -o-transition: width 0.5s, height 1s;
     -moz-transition: width 0.5s, height 1s;
     transition: width 0.5s, height 1s;
-    background-image: linear-gradient(#FF8500, #FF850088);
-    /*background-image: linear-gradient(#2176FF, #33A1FD);*/
+    /* background-image: linear-gradient(#FF8500, #FF850088); */
+    background-image: linear-gradient(#2176FF00, #33A1FD, #6bbcff);
 	width: 7vw;
 	height: 16vw;
 }
