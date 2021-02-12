@@ -16,7 +16,7 @@ function repair(){
 
 function check(){
   var mode = getCookie("mode");
-  alert(mode);
+  // alert(mode);
   if(mode=="dark"){
     darkMode();
   }
