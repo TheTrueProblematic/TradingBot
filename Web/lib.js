@@ -21,13 +21,21 @@ function check(){
   // alert(mode);
   if(log!="VXNlcm5hbWU="){
     window.location='signin.html';
-  } else {
-    window.location='landing.html';
   }
   if(mode=="dark"){
     darkMode();
   } else {
     lightMode();
+  }
+}
+
+function check2(){
+  var mode = getCookie("mode");
+  var log = getCookie("signin");
+  // alert(mode);
+  if(log!="VXNlcm5hbWU="){
+  } else {
+    window.location='landing.html';
   }
 }
 
