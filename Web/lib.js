@@ -21,6 +21,8 @@ function check(){
   // alert(mode);
   if(log!="VXNlcm5hbWU="){
     window.location='signin.html';
+  } else {
+    window.location='landing.html';
   }
   if(mode=="dark"){
     darkMode();
