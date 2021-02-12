@@ -36,14 +36,14 @@ html{
     }
     .signon{
         position:absolute;
-        right:1vw;
-        top:2vh;
+        right:46vw;
+        top:40vh;
         font-family: 'Roboto', sans-serif;
         z-index:1;
         cursor:pointer;
     }
     #signin{
-        width:17vw;
+        height:3.5vw;
         cursor:pointer;
     }
     .black {
@@ -76,11 +76,11 @@ html{
         }
     .two{
         position:absolute;
-        top:63vh;
+        top:48vh;
     }
     .three{
         position:absolute;
-        top:80vh;
+        top:60vh;
     }
     .maintitle{
         font-size:2.5vw;
@@ -127,8 +127,8 @@ div.menu:hover {
     transition: width 0.5s, height 1s;
     background-image: linear-gradient(#FF8500, #FF850088);
     /*background-image: linear-gradient(#2176FF, #33A1FD);*/
-	width: 13vw;
-	height: 17vw;
+	width: 7vw;
+	height: 16vw;
 }
 .request{
     position:absolute;
