@@ -2,7 +2,8 @@ function signIn(){
     var uname = btoa(document.getElementById("user").value);
     var passw = btoa(document.getElementById("pass").value);
     if(uname=="VXNlcm5hbWU="&passw=="UGFzc3dvcmQ="){
-    window.location='landing.html';
+      setCookie("signin", "uname", 1);
+      window.location='landing.html';
   }
 }
 function homePage(){
@@ -16,9 +17,15 @@ function repair(){
 
 function check(){
   var mode = getCookie("mode");
+  var log = getCookie("signin");
   // alert(mode);
+  if(log!="VXNlcm5hbWU="){
+    window.location='signin.html';
+  }
   if(mode=="dark"){
     darkMode();
+  } else {
+    lightMode();
   }
 }
 
