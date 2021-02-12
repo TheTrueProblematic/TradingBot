@@ -7,6 +7,8 @@ html{
         background-size:cover;
         background-repeat:no-repeat;
         height:100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
     h1 {
         position:absolute;
@@ -18,7 +20,6 @@ html{
         width:100%;
         padding: 0;
         margin: 0;
-        color:#FAFAFF;
         text-shadow:2px 2px black;
         font-size: 300%
     }
@@ -32,7 +33,7 @@ html{
       margin: 0;
       color:#FAFAFF;
       text-shadow:2px 2px black;
-      font-size: 100%
+      font-size: 100%;
     }
     .signon{
         position:absolute;
@@ -46,6 +47,20 @@ html{
         height:3.5vw;
         cursor:pointer;
     }
+    .darkLight{
+      position:absolute;
+      top:0vh;
+      right:2vw;
+    }
+    #seeindark{
+      right:-100vw;
+    }
+    #darkLogo{
+      width:8vw;
+    }
+    #lightLogo{
+      width:8vw;
+    }
     .black {
         color: black;
         text-decoration:none;
@@ -57,7 +72,6 @@ html{
     #h2{
         position:absolute;
         text-align:center;
-        color:black;
         top:24vh;
         font-size:2vw;
         left:0px;
