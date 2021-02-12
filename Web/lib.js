@@ -2,7 +2,7 @@ function signIn(){
     var uname = btoa(document.getElementById("user").value);
     var passw = btoa(document.getElementById("pass").value);
     if(uname=="VXNlcm5hbWU="&passw=="UGFzc3dvcmQ="){
-      setCookie("signin", "uname", 1);
+      setCookie("signin", uname, 1);
       window.location='landing.html';
   }
 }
