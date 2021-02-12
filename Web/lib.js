@@ -18,9 +18,9 @@ function darkMode(){
   document.getElementById('seeinlight').style.right = '-100vw';
   document.getElementById('seeindark').style.right = '2vw';
   document.getElementById('body').style.background="#262626";
-  document.getElementById('h1').style.background="linear-gradient(#ff7200, #ff4800)";
+  // document.getElementById('h1').style.background="linear-gradient(#ff7200, #ff4800)";
   document.getElementById('h1text').style.color="#000000";
-  document.getElementById('h1text').style.textShadow="2px 2px white";
+  document.getElementById('h1text').style.textShadow="1px 1px white";
   document.getElementById('body').style.color="#FAFAFF";
 }
 function lightMode(){
