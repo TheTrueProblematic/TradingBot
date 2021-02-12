@@ -4,12 +4,12 @@ from os import name
 from subprocess import call
 
 
-class baseBot:
+class bot:
     def error_handler(self, err):
         print(err)
 
 
-class printBot(baseBot):
+class printBot(bot):
     def clear(self):
         _ = call('clear' if name == 'posix' else 'cls')
 
@@ -54,8 +54,8 @@ class printBot(baseBot):
 
 
 class pumpBot(printBot):
-    def __init__(self, exchange_secret_key, shrimpy_public_key, shrimpy_secret_key, user_id, account_id):
-        self.ex_pub = self
+    def __init__(self, exchange_public_key,exchange_secret_key, shrimpy_public_key, shrimpy_secret_key, user_id, account_id):
+        self.ex_pub = exchange_public_key
         self.ex_sec = exchange_secret_key
         self.smp_pub = shrimpy_public_key
         self.smp_sec = shrimpy_secret_key
