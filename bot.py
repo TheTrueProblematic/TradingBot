@@ -25,7 +25,7 @@ class printBot(bot):
 
     def titleCenter(self, text):
         l = len(text)
-        sp = 35 - (l / 2)
+        sp = 36 - (l / 2)
         ret = text
         for i in range(int(sp)):
             ret = "-" + ret + "-"
@@ -107,6 +107,7 @@ class pumpBot(printBot):
         self.account_id = account_id
         self.client = shrimpy.ShrimpyApiClient(shrimpy_public_key, shrimpy_secret_key)
         self.balance = self.client.get_balance(user_id, account_id)
+        self.coin = ''
 
     def getBalance(self):
         return self.balance
@@ -115,7 +116,19 @@ class pumpBot(printBot):
         self.balance = self.client.get_balance(self.user_id, self.account_id)
 
     def getRawToken(self):
-        self.client.get_token()
+        return self.client.get_token()
+
+    def setCoin(self, coin):
+        self.coin = coin.upper()
+
+    def getCoin(self):
+        return self.coin.upper()
+
+    def coinPrompt(self):
+        self.print('Enter Coin', ' ')
+        coin = input("Coin: ")
+        self.setCoin(coin)
+        return coin.upper()
 
     def condense(self, coinName):
         self.setBalance()
